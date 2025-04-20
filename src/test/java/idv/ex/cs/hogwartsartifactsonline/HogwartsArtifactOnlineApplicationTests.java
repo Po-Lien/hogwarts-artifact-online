@@ -1,10 +1,10 @@
-package idv.ex.cs.hogwarts_artifact_online;
+package idv.ex.cs.hogwartsartifactsonline;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HogwartsArtifactOnlineApplicationTests {
+class HogwartsArtifactsOnlineApplicationTests {
 
 	@Test
 	void contextLoads() {
