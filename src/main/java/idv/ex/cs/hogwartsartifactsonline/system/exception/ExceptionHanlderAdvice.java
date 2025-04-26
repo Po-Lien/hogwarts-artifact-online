@@ -1,6 +1,5 @@
 package idv.ex.cs.hogwartsartifactsonline.system.exception;
 
-import idv.ex.cs.hogwartsartifactsonline.artifact.ArtifactNotFoundException;
 import idv.ex.cs.hogwartsartifactsonline.system.Result;
 import idv.ex.cs.hogwartsartifactsonline.system.StatusCode;
 import org.springframework.http.HttpStatus;
@@ -18,9 +17,9 @@ import java.util.Map;
 @RestControllerAdvice
 public class ExceptionHanlderAdvice {
 
-    @ExceptionHandler(ArtifactNotFoundException.class)
+    @ExceptionHandler(ObjectNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    Result handleArtifactNotFoundException(ArtifactNotFoundException ex) {
+    Result handleObjectNotFoundException(ObjectNotFoundException ex) {
         return new Result(false, StatusCode.NOT_FOUND, ex.getMessage());
     }
 
