@@ -64,5 +64,9 @@ public class WizardController {
         return new Result(true, StatusCode.SUCCESS, "Delete Success", null);
     }
 
-
+    @PutMapping("/{wizardId}/artifacts/{artifactId}")
+    public Result assignArtifact(@PathVariable Integer wizardId, @PathVariable String artifactId) {
+        wizardService.assignArtifact(wizardId, artifactId);
+        return new Result(true, StatusCode.SUCCESS, "Artifact Assignment Success", null);
+    }
 }
